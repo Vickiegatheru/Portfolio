@@ -1,2 +1,10 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+
+<main>
+  <slot />
+</main>
+<h1>Hi, I’m Vickie 👋</h1>
+<p>Frontend Developer specializing in Svelte, React, and JavaScript.</p>
+
+<footer>
+  <p>© 2025 Vickie Gatheru</p>
+</footer>
