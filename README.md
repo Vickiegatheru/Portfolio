@@ -11,8 +11,7 @@ SvelteKit, React, and JavaScript.
 - Git & GitHub
 
 ## Live Site
-https://melodious-palmier-b3ca2f.netlify.app/
-
+(https://portfoliovickie.netlify.app/)
 ## Projects
 - Portfolio Website
 - Job Board UI (in progress)
