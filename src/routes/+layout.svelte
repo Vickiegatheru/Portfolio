@@ -1,9 +1,14 @@
 <script>
   import { page } from '$app/stores';
+  let open = false;
 </script>
 
 <header>
-  <nav class="nav">
+  <button class="menu" on:click={() => open = !open}>
+    ☰
+  </button>
+
+  <nav class:open>
     <a href="/" class:selected={$page.url.pathname === '/'}>Home</a>
     <a href="/projects" class:selected={$page.url.pathname === '/projects'}>Projects</a>
     <a href="/about" class:selected={$page.url.pathname === '/about'}>About</a>
@@ -20,16 +25,21 @@
 </footer>
 
 <style>
-  .nav {
-    display: flex;
-    gap: 1.5rem;
-    padding: 1rem 2rem;
+  header {
+    padding: 1rem;
     border-bottom: 1px solid #ddd;
   }
 
-  a {
-    text-decoration: none;
-    color: #333;
+  .menu {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+  }
+
+  nav {
+    display: flex;
+    gap: 1rem;
   }
 
   .selected {
@@ -37,14 +47,19 @@
     border-bottom: 2px solid black;
   }
 
-  main {
-    padding: 2rem;
-    min-height: 80vh;
-  }
+  @media (max-width: 600px) {
+    .menu {
+      display: block;
+    }
 
-  footer {
-    text-align: center;
-    padding: 1rem;
-    border-top: 1px solid #ddd;
+    nav {
+      display: none;
+      flex-direction: column;
+      margin-top: 1rem;
+    }
+
+    nav.open {
+      display: flex;
+    }
   }
 </style>
