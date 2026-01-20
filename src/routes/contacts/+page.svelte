@@ -1,6 +1,6 @@
 <script>
-  // Replace this with your actual email address
-  const email = "vickiegatheru@gmail.com"; 
+  const emailAddress = "vickiegitahi@gmail.com";
+  const phoneNumber = "+254 115 663 645"; 
 </script>
 
 <section class="contact-section">
@@ -10,54 +10,85 @@
     <div class="underline"></div>
   </div>
 
-  <div class="container-narrow">
-    <div class="card contact-card">
-      <p class="intro-text">
-        I'm currently open to new opportunities, freelance projects, or just a friendly chat about technology.
-      </p>
+  <div class="container-wide">
+    <div class="card contact-grid">
+      
+      <div class="info-column">
+        <h3>Let's Chat</h3>
+        <p class="intro-text">
+          I'm currently open to new opportunities. Feel free to reach out directly or send a message.
+        </p>
 
-      <div class="action-buttons">
-        <a href="mailto:{email}" class="btn-primary">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-          Send me an Email
-        </a>
+        <div class="direct-contact">
+          <div class="contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <a href="tel:{phoneNumber}" class="contact-link">{phoneNumber}</a>
+          </div>
 
-        <a href="https://linkedin.com/in/vickiegatheru" target="_blank" class="btn-secondary">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-          LinkedIn
-        </a>
-        
-        <a href="https://github.com/Vickiegatheru" target="_blank" class="btn-secondary">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-          GitHub
-        </a>
+          <div class="contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <a href="mailto:{emailAddress}" class="contact-link">{emailAddress}</a>
+          </div>
+        </div>
+
+        <div class="social-buttons">
+          <a href="https://www.linkedin.com/in/vickie-gatheru-692a942bb" target="_blank" class="btn-secondary">
+            LinkedIn
+          </a>
+          <a href="https://github.com/Vickiegatheru" target="_blank" class="btn-secondary">
+            GitHub
+          </a>
+        </div>
       </div>
+
+      <div class="form-column">
+        <form name="contact" method="POST" data-netlify="true" class="contact-form">
+          <input type="hidden" name="form-name" value="contact" />
+
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Name" required />
+            </div>
+            <div class="form-group">
+              <input type="tel" name="phone" placeholder="Phone (Optional)" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Email Address" required />
+          </div>
+
+          <div class="form-group">
+            <textarea name="message" rows="3" placeholder="How can I help you?" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary">
+            Send Message
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          </button>
+        </form>
+      </div>
+
     </div>
   </div>
 </section>
 
 <style>
-  /* Base Container */
+  /* Reduced margins to fit on one screen */
   .contact-section {
-    max-width: 1200px;
-    margin: 6rem auto;
-    padding: 0 2rem;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    max-width: 1000px; /* Wider container for 2 columns */
+    margin: 2rem auto; /* Reduced from 6rem */
+    padding: 0 1.5rem;
+    font-family: 'Inter', system-ui, sans-serif;
   }
 
-  .container-narrow {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  /* Header Styles */
   .header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem; /* Reduced from 4rem */
   }
 
   .subtitle {
-    color: #10b981; /* Hardcoded Green */
+    color: #10b981;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     font-weight: 800;
@@ -67,8 +98,8 @@
   }
 
   h2 {
-    color: #f4f4f5; /* Hardcoded White */
-    font-size: 3rem;
+    color: #f4f4f5;
+    font-size: 2.5rem;
     margin: 0;
     font-weight: 800;
   }
@@ -77,90 +108,137 @@
     width: 60px;
     height: 4px;
     background: #10b981;
-    margin: 1.5rem auto 0;
+    margin: 1rem auto 0;
     border-radius: 2px;
   }
 
-  /* Card Styling */
-  .card {
-    background: #18181b; /* Hardcoded Dark Gray */
+  /* --- 2-COLUMN LAYOUT --- */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* Info takes less space, Form takes more */
+    background: #18181b;
     border: 1.5px solid rgba(255, 255, 255, 0.12);
-    border-radius: 28px;
-    padding: 3rem;
-    text-align: center;
-    transition: border-color 0.3s ease;
+    border-radius: 24px;
+    overflow: hidden;
   }
 
-  .card:hover {
-    border-color: #10b981;
-    box-shadow: 0 0 25px rgba(16, 185, 129, 0.1);
+  /* Left Column: Info */
+  .info-column {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid rgba(255,255,255,0.05);
   }
 
+  /* Right Column: Form */
+  .form-column {
+    padding: 2.5rem;
+  }
+
+  h3 { color: #f4f4f5; margin-top: 0; }
+  
   .intro-text {
-    color: #a1a1aa; /* Visible Gray */
-    font-size: 1.2rem;
+    color: #a1a1aa;
+    font-size: 0.95rem;
     line-height: 1.6;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
   }
 
-  /* Action Buttons Grid */
-  .action-buttons {
+  /* Direct Contact Items */
+  .direct-contact {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    margin-bottom: 2rem;
   }
 
-  /* Primary Button (Green) */
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #e4e4e7;
+  }
+
+  .contact-link {
+    color: #e4e4e7;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  .contact-link:hover { color: #10b981; }
+
+  /* Social Buttons */
+  .social-buttons { display: flex; gap: 0.8rem; }
+
+  .btn-secondary {
+    padding: 10px 20px;
+    border: 1px solid #3f3f46;
+    border-radius: 8px;
+    color: #a1a1aa;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+    text-align: center;
+  }
+  .btn-secondary:hover {
+    border-color: #10b981;
+    color: #10b981;
+  }
+
+  /* --- FORM STYLES --- */
+  .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+  
+  /* Puts Name & Phone on same row */
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  input, textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 12px;
+    color: white;
+    font-family: inherit;
+    font-size: 0.9rem;
+    box-sizing: border-box; /* Fixes padding issues */
+  }
+
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: #10b981;
+    background: rgba(16, 185, 129, 0.05);
+  }
+
   .btn-primary {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    background-color: #10b981 !important; /* Force Green */
-    color: white !important; /* Force White */
+    gap: 8px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
     font-weight: 700;
-    padding: 16px;
-    border-radius: 12px;
-    text-decoration: none;
-    transition: all 0.2s;
-    font-size: 1.1rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.2s;
+    margin-top: 0.5rem;
   }
 
-  .btn-primary:hover {
-    background-color: #059669 !important;
-    transform: translateY(-2px);
-  }
+  .btn-primary:hover { transform: translateY(-2px); }
 
-  /* Secondary Button (Outline) */
-  .btn-secondary {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background-color: transparent;
-    color: #e4e4e7 !important; /* Force Light Gray */
-    border: 1.5px solid #3f3f46;
-    font-weight: 600;
-    padding: 14px;
-    border-radius: 12px;
-    text-decoration: none;
-    transition: all 0.2s;
-  }
-
-  .btn-secondary:hover {
-    border-color: #10b981;
-    color: #10b981 !important;
-    background: rgba(16, 185, 129, 0.05);
-  }
-
-  /* Responsive */
+  /* Responsive Mobile */
   @media (max-width: 768px) {
-    h2 {
-      font-size: 2.2rem;
-    }
-    .card {
-      padding: 2rem;
-    }
+    .contact-grid { grid-template-columns: 1fr; }
+    .info-column { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.05); padding: 2rem; }
+    .form-column { padding: 2rem; }
+    .form-row { grid-template-columns: 1fr; }
   }
 </style>

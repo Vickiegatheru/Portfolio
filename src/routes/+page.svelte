@@ -66,6 +66,7 @@
     margin: 0;
     transition: background-color 0.4s ease;
     font-family: 'Inter', system-ui, sans-serif;
+
   }
 
   .ambient-glow {
