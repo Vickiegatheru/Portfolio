@@ -67,31 +67,31 @@
 </section>
 
 <style>
-  /* Force Dark Background */
+  /* --- Global Dark Mode Force --- */
   :global(body) {
     background-color: #09090b !important;
     color: #f4f4f5;
     min-height: 100vh;
   }
 
-  /* Base Container - Centered Vertically */
+  /* --- Page Layout (Centered) --- */
   .projects-section {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     
-    /* Center in viewport logic */
+    /* Vertically center content */
     min-height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
-  /* Section Header - Tighter Spacing */
+  /* Header */
   .header {
     text-align: center;
-    margin-bottom: 2.5rem; /* Reduced from 5rem */
+    margin-bottom: 2.5rem;
   }
 
   .subtitle {
@@ -106,7 +106,7 @@
 
   h2 {
     color: #f4f4f5;
-    font-size: 2.5rem; /* Reduced form 3rem */
+    font-size: 2.5rem;
     margin: 0;
     font-weight: 800;
   }
@@ -119,32 +119,39 @@
     border-radius: 2px;
   }
 
-  /* Grid Layout - Tighter Gaps */
+  /* Grid Layout */
   .grid {
     display: grid;
-    gap: 1.5rem; /* Reduced from 2.5rem */
-    /* Ensure 3 columns fit on desktop */
+    gap: 1.5rem;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Added padding bottom to ensure hover effects don't get cut by screen edge */
+    padding-bottom: 1rem; 
   }
 
-  /* Card Styling - More Compact */
+  /* --- Card Styling (Fixed Cutoff Issue) --- */
   .card {
     background: #18181b;
     border: 1.5px solid rgba(255, 255, 255, 0.12);
     border-radius: 24px;
     position: relative;
     transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-    overflow: hidden;
+    
+    /* IMPORTANT: Removed overflow:hidden so button shadows aren't cut */
+    display: flex;
+    flex-direction: column;
   }
 
   .card:hover {
     transform: translateY(-8px);
     border-color: #10b981;
     box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
   }
 
   .card-inner {
-    padding: 1.5rem; /* Reduced padding */
+    padding: 1.5rem;
+    /* Added extra bottom padding so button sits comfortably */
+    padding-bottom: 1.8rem;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -163,6 +170,14 @@
     margin: 0;
     font-weight: 700;
     line-height: 1.2;
+  }
+
+  p {
+    color: #a1a1aa;
+    line-height: 1.5;
+    margin: 0 0 1.5rem 0;
+    font-size: 0.95rem;
+    flex-grow: 1;
   }
 
   /* GitHub Link */
@@ -186,15 +201,7 @@
     background: rgba(16, 185, 129, 0.1);
   }
 
-  p {
-    color: #a1a1aa;
-    line-height: 1.5;
-    margin: 0 0 1.5rem 0;
-    font-size: 0.95rem;
-    flex-grow: 1;
-  }
-
-  /* Tech Pills - Smaller */
+  /* Tech Pills */
   .tech-stack {
     display: flex;
     gap: 0.5rem;
@@ -229,16 +236,17 @@
     font-size: 0.9rem;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    width: 100%; /* Full width button */
+    width: 100%;
     box-sizing: border-box;
   }
 
   .btn-live:hover {
     background-color: #059669 !important;
     transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(16, 185, 129, 0.3);
   }
 
-  /* Responsive Adjustments */
+  /* Responsive */
   @media (max-width: 768px) {
     .grid { grid-template-columns: 1fr; }
     .projects-section { padding-top: 2rem; display: block; }
