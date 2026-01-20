@@ -1,14 +1,7 @@
 <script>
-  // You can add or remove skills here
   const skills = [
-    "JavaScript (ES6+)", 
-    "Svelte / SvelteKit", 
-    "React.js", 
-    "TypeScript",
-    "Tailwind CSS", 
-    "Node.js", 
-    "Git & GitHub", 
-    "Figma / UI Design"
+    "JavaScript (ES6+)", "Svelte / SvelteKit", "React.js", "TypeScript",
+    "Tailwind CSS", "Node.js", "Git & GitHub", "Figma / UI Design"
   ];
 </script>
 
@@ -28,7 +21,7 @@
       <p>
         I bridge the gap between design and engineering. With a strong foundation in modern JavaScript frameworks and a keen eye for aesthetics, I transform complex problems into intuitive, interactive interfaces.
       </p>
-      <p>
+      <p class="last-p">
         When I'm not coding, I'm exploring new UI trends, optimizing web performance, or experimenting with digital electronics.
       </p>
     </div>
@@ -48,22 +41,28 @@
 </section>
 
 <style>
-  /* Base Container */
+  /* Base Container - Compact Layout */
   .about-section {
-    max-width: 1000px;
-    margin: 6rem auto;
-    padding: 0 2rem;
+    max-width: 1100px;
+    margin: 0 auto; 
+    padding: 0 1.5rem;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    
+    /* Center content vertically on the screen */
+    min-height: 85vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
   }
 
-  /* Header Styles */
+  /* Header Styles - Reduced Spacing */
   .header {
     text-align: center;
-    margin-bottom: 5rem;
+    margin-bottom: 2.5rem; /* Reduced from 5rem */
   }
 
   .subtitle {
-    color: #10b981; /* Hardcoded Green */
+    color: #10b981;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     font-weight: 800;
@@ -73,8 +72,8 @@
   }
 
   h2 {
-    color: #f4f4f5; /* Hardcoded White */
-    font-size: 3rem;
+    color: #f4f4f5;
+    font-size: 2.5rem; /* Reduced from 3rem */
     margin: 0;
     font-weight: 800;
   }
@@ -83,88 +82,86 @@
     width: 60px;
     height: 4px;
     background: #10b981;
-    margin: 1.5rem auto 0;
+    margin: 1rem auto 0;
     border-radius: 2px;
   }
 
-  /* Grid Layout */
+  /* Grid Layout - Tighter Gaps */
   .content-grid {
     display: grid;
-    grid-template-columns: 1.2fr 1fr; /* Bio gets slightly more space */
-    gap: 2.5rem;
+    grid-template-columns: 1.3fr 1fr; /* Bio gets space, Skills stay compact */
+    gap: 1.5rem; /* Reduced from 2.5rem */
   }
 
-  /* Card Styling (Consistent with Projects Page) */
+  /* Card Styling - Compact Padding */
   .card {
-    background: #18181b; /* Hardcoded Dark Gray */
+    background: #18181b;
     border: 1.5px solid rgba(255, 255, 255, 0.12);
-    border-radius: 28px;
-    padding: 2.5rem;
+    border-radius: 24px;
+    padding: 2rem; /* Reduced from 2.5rem */
     transition: transform 0.3s ease, border-color 0.3s ease;
   }
 
   .card:hover {
-    transform: translateY(-8px);
     border-color: #10b981;
-    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
   }
 
   h3 {
-    color: #f4f4f5; /* Hardcoded White */
-    font-size: 1.5rem;
+    color: #f4f4f5;
+    font-size: 1.3rem;
     margin-top: 0;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
     font-weight: 700;
   }
 
   p {
-    color: #a1a1aa; /* Hardcoded Visible Gray */
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-    font-size: 1.05rem;
+    color: #a1a1aa;
+    line-height: 1.6; /* Slightly tighter line height */
+    margin-bottom: 1rem;
+    font-size: 1rem;
   }
 
-  strong {
-    color: #10b981; /* Hardcoded Green Highlight */
-  }
+  .last-p { margin-bottom: 0; }
 
-  /* Skills Grid */
+  strong { color: #10b981; }
+
+  /* Skills Grid - Compact */
   .skills-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 0.8rem; /* Reduced gap */
   }
 
   .skill-item {
     display: flex;
     align-items: center;
-    gap: 10px;
-    color: #e4e4e7; /* Light Gray */
+    gap: 8px;
+    color: #e4e4e7;
     font-weight: 500;
-    padding: 10px;
+    font-size: 0.9rem;
+    padding: 8px 12px;
     background: rgba(255,255,255,0.03);
     border-radius: 8px;
     border: 1px solid rgba(255,255,255,0.05);
   }
 
   .check-icon {
-    color: #10b981; /* Green Checkmark */
+    color: #10b981;
     font-weight: bold;
+    font-size: 0.8rem;
   }
 
   /* Responsive Adjustments */
   @media (max-width: 768px) {
     .content-grid {
       grid-template-columns: 1fr;
+      gap: 1.5rem;
     }
-    h2 {
-      font-size: 2.2rem;
+    .about-section {
+        justify-content: flex-start;
+        padding-top: 2rem;
     }
-    .card {
-      padding: 2rem;
-    }
-    .skills-grid {
-        grid-template-columns: 1fr; /* Stack skills on mobile */
-    }
+    .card { padding: 1.5rem; }
   }
 </style>
