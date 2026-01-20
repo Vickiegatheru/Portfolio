@@ -3,9 +3,9 @@
   const projects = [
     {
       title: "Personal Portfolio",
-      description: "A high-performance, responsive portfolio built to showcase frontend engineering mastery and design aesthetics.",
+      description: "A high-performance, responsive portfolio built to showcase my frontend engineering mastery and design.",
       tech: ["SvelteKit", "JavaScript", "Tailwind"],
-      link: "https://melodious-palmier-b3ca2f.netlify.app/",
+      link: "https://portfoliovickie.netlify.app/",
       github: "https://github.com/Vickiegatheru/Portfolio"
     },
     {
@@ -14,7 +14,7 @@
       tech: ["HTML", "CSS", "JavaScript"],
       link: "https://virtualdelab.netlify.app/",
       github: "https://github.com/Vickiegatheru/virtual-lab"
-    }, /* <--- Comma added here to fix the build error */
+    }, 
     {
       title: "E-Commerce Concept",
       description: "An accessible shopping experience focused on core web vitals and seamless user transitions.",
@@ -28,7 +28,7 @@
 <section class="projects-section">
   <div class="header">
     <span class="subtitle">Showcase</span>
-    <h2>Selected Projects</h2>
+    <h2>Projects</h2>
     <div class="underline"></div>
   </div>
 
@@ -39,7 +39,8 @@
           <div class="card-header">
             <h3>{project.title}</h3>
             <div class="external-links">
-               <a href={project.github} target="_blank" aria-label="GitHub Repository">
+               <a href={project.github} target="_blank" aria-label="GitHub Repository" class="github-link">
+                <span>Code</span>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
               </a>
             </div>
@@ -112,10 +113,9 @@
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   }
 
-  /* Card Styling - High Visibility Border Focus */
+  /* Card Styling */
   .card {
     background: var(--card-bg, rgba(18, 18, 22, 0.8));
-    /* The requested visible borders */
     border: 1.5px solid rgba(255, 255, 255, 0.12);
     border-radius: 28px;
     position: relative;
@@ -125,7 +125,6 @@
 
   .card:hover {
     transform: translateY(-12px);
-    /* Border lights up Emerald on hover */
     border-color: var(--accent, #10b981);
     box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5), 
                 0 0 15px rgba(16, 185, 129, 0.1);
@@ -152,12 +151,19 @@
     font-weight: 700;
   }
 
-  .external-links a {
+  /* --- Updated GitHub Link Styling --- */
+  .github-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     color: var(--text-muted, #a1a1aa);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
     transition: color 0.2s;
   }
 
-  .external-links a:hover {
+  .github-link:hover {
     color: var(--accent, #10b981);
   }
 
@@ -169,7 +175,7 @@
     flex-grow: 1;
   }
 
-  /* Tech Pills with Visible Borders */
+  /* Tech Pills */
   .tech-stack {
     display: flex;
     gap: 0.75rem;
@@ -184,7 +190,6 @@
     border-radius: 10px;
     font-size: 0.8rem;
     font-weight: 600;
-    /* Visible pill border */
     border: 1px solid rgba(16, 185, 129, 0.25);
     transition: all 0.3s;
   }
@@ -194,31 +199,31 @@
     background: rgba(16, 185, 129, 0.1);
   }
 
-  /* Live Link Button */
   .footer-links {
     margin-top: auto;
   }
 
+  /* --- Updated Button Styling --- */
   .btn-live {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
-    color: var(--text-main, #f4f4f5);
+    background-color: var(--accent, #10b981); /* Green Background */
+    color: white !important; /* Force white text */
+    padding: 12px 24px;
+    border-radius: 12px;
     text-decoration: none;
     font-weight: 700;
     font-size: 0.95rem;
-    transition: gap 0.3s;
+    transition: all 0.3s ease;
+    width: fit-content;
   }
 
   .btn-live:hover {
-    color: var(--accent, #10b981);
-    gap: 12px;
-  }
-
-  /* Light Mode Visibility Adjustment */
-  :global(.light-theme) .card {
-    border: 1.5px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    background-color: #059669; /* Darker green on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
   }
 
   /* Responsive Adjustments */
