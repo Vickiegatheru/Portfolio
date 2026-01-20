@@ -9,12 +9,13 @@
       github: "https://github.com/Vickiegatheru/Portfolio"
     },
     {
-      title: "Job Board UI",
-      description: "A sophisticated frontend interface featuring dynamic filtering, real-time search, and sleek job listing components.",
-      tech: ["React", "Lucide Icons", "CSS modules"],
-      link: "#",
-      github: "https://github.com/Vickiegatheru"
-    },
+  title: "Virtual Digital Electronics Lab",
+  description: "An interactive web-based electronics lab that allows users to build and simulate digital circuits using drag-and-drop logic gates, switches, LEDs, and real-time wiring.",
+  tech: ["HTML", "CSS", "JavaScript"],
+  link: "https://virtualdelab.netlify.app/",
+  github: "https://github.com/Vickiegatheru/virtual-lab"
+}
+
     {
       title: "E-Commerce Concept",
       description: "An accessible shopping experience focused on core web vitals and seamless user transitions.",
