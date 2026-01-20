@@ -3,7 +3,7 @@
   const projects = [
     {
       title: "Personal Portfolio",
-      description: "A high-performance, responsive portfolio built to showcase my frontend engineering mastery and design.",
+      description: "A high-performance, responsive portfolio built to showcase frontend engineering mastery and design aesthetics.",
       tech: ["SvelteKit", "JavaScript", "Tailwind"],
       link: "https://portfoliovickie.netlify.app/",
       github: "https://github.com/Vickiegatheru/Portfolio"
@@ -38,6 +38,7 @@
         <div class="card-inner">
           <div class="card-header">
             <h3>{project.title}</h3>
+            
             <div class="external-links">
                <a href={project.github} target="_blank" aria-label="GitHub Repository" class="github-link">
                 <span>Code</span>
@@ -82,7 +83,7 @@
   }
 
   .subtitle {
-    color: var(--accent, #10b981);
+    color: #10b981; /* Hardcoded Green */
     text-transform: uppercase;
     letter-spacing: 0.2em;
     font-weight: 800;
@@ -92,7 +93,7 @@
   }
 
   h2 {
-    color: var(--text-main, #f4f4f5);
+    color: #f4f4f5; /* Hardcoded White */
     font-size: 3rem;
     margin: 0;
     font-weight: 800;
@@ -101,7 +102,7 @@
   .underline {
     width: 60px;
     height: 4px;
-    background: var(--accent, #10b981);
+    background: #10b981;
     margin: 1.5rem auto 0;
     border-radius: 2px;
   }
@@ -115,7 +116,7 @@
 
   /* Card Styling */
   .card {
-    background: var(--card-bg, rgba(18, 18, 22, 0.8));
+    background: #18181b; /* Hardcoded Dark Gray */
     border: 1.5px solid rgba(255, 255, 255, 0.12);
     border-radius: 28px;
     position: relative;
@@ -125,7 +126,7 @@
 
   .card:hover {
     transform: translateY(-12px);
-    border-color: var(--accent, #10b981);
+    border-color: #10b981;
     box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5), 
                 0 0 15px rgba(16, 185, 129, 0.1);
   }
@@ -145,30 +146,35 @@
   }
 
   h3 {
-    color: var(--text-main, #f4f4f5);
+    color: #f4f4f5; /* Hardcoded White */
     font-size: 1.6rem;
     margin: 0;
     font-weight: 700;
   }
 
-  /* --- Updated GitHub Link Styling --- */
+  /* --- GitHub Link Styling (Fixed Visibility) --- */
   .github-link {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: var(--text-muted, #a1a1aa);
+    color: #a1a1aa !important; /* Visible Gray */
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9rem;
-    transition: color 0.2s;
+    padding: 6px 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    transition: all 0.2s;
   }
 
   .github-link:hover {
-    color: var(--accent, #10b981);
+    color: white !important;
+    border-color: #10b981;
+    background: rgba(16, 185, 129, 0.1);
   }
 
   p {
-    color: var(--text-muted, #a1a1aa);
+    color: #a1a1aa; /* Visible Gray */
     line-height: 1.7;
     margin: 0 0 2rem 0;
     font-size: 1.05rem;
@@ -185,7 +191,7 @@
 
   .tech-pill {
     background: rgba(16, 185, 129, 0.05);
-    color: var(--accent, #10b981);
+    color: #10b981;
     padding: 6px 14px;
     border-radius: 10px;
     font-size: 0.8rem;
@@ -203,27 +209,27 @@
     margin-top: auto;
   }
 
-  /* --- Updated Button Styling --- */
+  /* --- Live Button Styling (Fixed Visibility) --- */
   .btn-live {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background-color: var(--accent, #10b981); /* Green Background */
-    color: white !important; /* Force white text */
+    background-color: #10b981 !important; /* FORCE GREEN */
+    color: white !important; /* FORCE WHITE TEXT */
     padding: 12px 24px;
     border-radius: 12px;
     text-decoration: none;
     font-weight: 700;
     font-size: 0.95rem;
     transition: all 0.3s ease;
-    width: fit-content;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
   }
 
   .btn-live:hover {
-    background-color: #059669; /* Darker green on hover */
+    background-color: #059669 !important;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    box-shadow: 0 8px 15px rgba(16, 185, 129, 0.3);
   }
 
   /* Responsive Adjustments */
