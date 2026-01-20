@@ -12,7 +12,7 @@
     <a href="/" class:selected={$page.url.pathname === '/'}>Home</a>
     <a href="/projects" class:selected={$page.url.pathname === '/projects'}>Projects</a>
     <a href="/about" class:selected={$page.url.pathname === '/about'}>About</a>
-    <a href="/contact" class:selected={$page.url.pathname === '/contact'}>Contact</a>
+    <a href="/contacts" class:selected={$page.url.pathname === '/contacts'}>Contact</a>
   </nav>
 </header>
 
