@@ -15,12 +15,12 @@
       github: "https://github.com/Vickiegatheru/virtual-lab"
     }, 
     {
-      title: "E-Commerce Concept",
-      description: "An accessible shopping experience focused on core web vitals and seamless user transitions.",
-      tech: ["Svelte", "Shopify API", "CSS"],
-      link: "#",
-      github: "https://github.com/Vickiegatheru"
-    }
+  title: "MarketPulse Stock Tracker",
+  description: "A real-time equity dashboard featuring live price tracking, interactive charts, and a personalized watchlist with persistent state management.",
+  tech: ["React", "Vite", "Tailwind", "Zustand", "Recharts"],
+  link: "#", 
+  github: "https://github.com/Vickiegatheru/market-pulse" 
+}
   ];
 </script>
 
