@@ -18,8 +18,8 @@
   title: "MarketPulse Stock Tracker",
   description: "A real-time equity dashboard featuring live price tracking, interactive charts, and a personalized watchlist with persistent state management.",
   tech: ["React", "Vite", "Tailwind", "Zustand", "Recharts"],
-  link: "#", 
-  github: "https://github.com/Vickiegatheru/market-pulse" 
+  link: "https://marketpulsestocks.netlify.app/", 
+  github: "https://github.com/Vickiegatheru/Market-Pulse.git" 
 }
   ];
 </script>
