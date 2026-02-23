@@ -1,12 +1,12 @@
 <script>
   const projects = [
     {
-      title: "Personal Portfolio",
-      description: "A high-performance, responsive portfolio built to showcase frontend engineering mastery.",
-      tech: ["SvelteKit", "JavaScript", "Tailwind"],
-      link: "https://portfoliovickie.netlify.app/",
-      github: "https://github.com/Vickiegatheru/Portfolio"
-    },
+      title: "MarketPulse Stock Tracker",
+      description: "A real-time equity dashboard featuring live price tracking, interactive charts, and a personalized watchlist with persistent state management.",
+      tech: ["React", "Vite", "Tailwind", "Zustand", "Recharts"],
+      link: "https://marketpulsestocks.netlify.app/", 
+      github: "https://github.com/Vickiegatheru/Market-Pulse.git" 
+},
     {
       title: "Virtual Electronics Lab",
       description: "Interactive lab to build and simulate digital circuits using drag-and-drop logic gates and real-time wiring.",
@@ -15,12 +15,13 @@
       github: "https://github.com/Vickiegatheru/virtual-lab"
     }, 
     {
-  title: "MarketPulse Stock Tracker",
-  description: "A real-time equity dashboard featuring live price tracking, interactive charts, and a personalized watchlist with persistent state management.",
-  tech: ["React", "Vite", "Tailwind", "Zustand", "Recharts"],
-  link: "https://marketpulsestocks.netlify.app/", 
-  github: "https://github.com/Vickiegatheru/Market-Pulse.git" 
+      title: "AI Breast Cancer Detection System",
+      description: "AI-powered medical diagnostic tool utilizing U-Net and VGG16 architectures to analyze mammograms and ultrasound images for early cancer detection.",
+      tech: ["React", "Python", "FastAPI", "U-Net", "VGG16"],
+      link: "https://breast-cancer-ai.netlify.app/", // Replace with your actual live link
+      github: "https://github.com/Vickiegatheru/breast-cancer-ai" // Replace with your actual repo link
 }
+  
   ];
 </script>
 
