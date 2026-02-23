@@ -18,7 +18,7 @@
       title: "AI Breast Cancer Detection System",
       description: "AI-powered medical diagnostic tool utilizing U-Net and VGG16 architectures to analyze mammograms and ultrasound images for early cancer detection.",
       tech: ["React", "Python", "FastAPI", "U-Net", "VGG16"],
-      link: "https://breast-cancer-ai.netlify.app/", 
+      link: "https://mammodetect.netlify.app/", 
       github: "https://github.com/Vickiegatheru/Breast-Cancer-AI-Final.git"
 }
   
