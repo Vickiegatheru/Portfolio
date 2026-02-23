@@ -14,7 +14,7 @@
     </div>
     
     <h1>Hi, I’m <span class="gradient-text">Vickie</span></h1>
-    <h2>Frontend Software Engineer</h2>
+    <h2> Software Engineer</h2>
 
     <p>
       Crafting high-performance web experiences with 
