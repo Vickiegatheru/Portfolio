@@ -4,8 +4,8 @@
       title: "MarketPulse Stock Tracker",
       description: "A real-time equity dashboard featuring live price tracking, interactive charts, and a personalized watchlist with persistent state management.",
       tech: ["React", "Vite", "Tailwind", "Zustand", "Recharts"],
-      link: "https://marketpulsestocks.netlify.app/", 
-      github: "https://github.com/Vickiegatheru/Market-Pulse.git" 
+      link: "https://stocktrackernse.netlify.app/", 
+      github: "https://github.com/Vickiegatheru/nse-marketpulse.git" 
 },
     {
       title: "Virtual Electronics Lab",
@@ -18,8 +18,8 @@
       title: "AI Breast Cancer Detection System",
       description: "AI-powered medical diagnostic tool utilizing U-Net and VGG16 architectures to analyze mammograms and ultrasound images for early cancer detection.",
       tech: ["React", "Python", "FastAPI", "U-Net", "VGG16"],
-      link: "https://breast-cancer-ai.netlify.app/", // Replace with your actual live link
-      github: "https://github.com/Vickiegatheru/breast-cancer-ai" // Replace with your actual repo link
+      link: "https://breast-cancer-ai.netlify.app/", 
+      github: "https://github.com/Vickiegatheru/Breast-Cancer-AI-Final.git"
 }
   
   ];
