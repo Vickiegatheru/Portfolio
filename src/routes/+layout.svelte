@@ -20,7 +20,7 @@
 </main>
 
 <footer>
-  <p>© 2025 Vickie Gatheru</p>
+  <p>© 2026 Vickie Gatheru</p>
 </footer>
 
 <style>
